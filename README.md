@@ -32,6 +32,8 @@ tf-aws-zero-trust-net/
 │   │   ├── main.tf
 │   │   ├── variables.tf
 │   │   ├── outputs.tf
+│   │   ├── routing.tf
+│   │   ├── subnets.tf
 │   │   ├── versions.tf
 │   │   ├── flowlogs.tf
 │   │   └── endpoints.tf
