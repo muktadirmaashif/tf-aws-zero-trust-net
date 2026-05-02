@@ -1,3 +1,5 @@
 .terraform/
 .git/
 terraform.tfstate*
+*.tfvars
+*.out
