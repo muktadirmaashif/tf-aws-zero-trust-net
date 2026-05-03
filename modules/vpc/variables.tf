@@ -13,9 +13,3 @@ variable "common_tags" {
   description = "Common tags for all resources"
   type        = map(string)
 }
-
-# variable "subnet_map" {
-#   description = "subnets to be mapped"
-#   type        = map(string)
-# }
-
