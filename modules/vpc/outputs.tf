@@ -22,13 +22,13 @@ output "subnet_az" {
   value = { for k, v in aws_subnet.main : k => v.availability_zone }
 }
 output "subnet_name" {
-  value = aws_subnet.main.tags["Name"]
+  value = { for k, v in aws_subnet.main : k => v.id }
 }
 
 # Route Table
 output "public_route_subnet" {
-  value = aws_route_table_association.public.subnet_id
+  value = { for k, v in aws_route_table_association.public : k => aws_subnet.main[k].cidr_block }
 }
 output "private_route_subnet" {
-  value = aws_route_table_association.private.subnet_id
+  value = { for k, v in aws_route_table_association.private : k => aws_subnet.main[k].cidr_block }
 }

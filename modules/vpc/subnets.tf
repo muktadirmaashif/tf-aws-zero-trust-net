@@ -21,7 +21,7 @@ resource "aws_subnet" "main" {
   cidr_block        = each.value
   availability_zone = local.az_list[index(keys(local.subnet_map), each.key)]
 
-  map_public_ip_on_launch = contains(split("-", each.key), "public")
+  map_public_ip_on_launch = contains(split("_", each.key), "public")
 
   tags = merge(var.common_tags,
     { Name = "${each.key}-subnet" }
