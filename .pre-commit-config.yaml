@@ -6,5 +6,6 @@ repos:
         name: Running terraform fmt
       - id: terraform_validate
         name: Running terraform validate
-      # - id: terraform_tflint
+      - id: terraform_tflint
+        name: Running tflint
       # - id: terraform_tfsec
